@@ -1,0 +1,54 @@
+/* Programa que calcula promedio de clase mediante una repeticion creada por
+sentinela */
+
+# include <iostream>
+
+using std::cout;
+using std::cin;
+using std::endl;
+using std::fixed;
+
+# include <iomanip>;  //manipuladores de flujo
+
+using std::setprecision; //asigna la precision de la salida numerica
+
+ int main()
+{
+
+  /* code */
+    int total;
+    int contadorCalificacion;
+    int calificacion;
+    double promedio;
+
+    // Inicializacion //
+    total = 0;
+    contadorCalificacion = 0;
+
+    // Procesamiento //
+    count << "Introduzca la calificacion o digite -1 para finalizar: ";
+    cin >> calificacion;
+
+    // estructura while //
+    while (calificacion != -1)
+      {
+      /* code */
+      total = total + calificacion;
+      contadorCalificacion = contadorCalificacion + 1;
+      cout << "Introduzca la calificacion o digite -1 para finalizar: ";
+      cin >> calificacion;
+      }
+
+    // terminacion //
+    if (contadorCalificacion != 0) {
+      /*calculo del promedio */
+      promedio = static_cast <double> (total) / contadorCalificacion;
+      /* output */
+      cout << "El promedio de la clase es: " << setprecision (2) <<
+      fixed << promedio << endl;
+      }
+    else // si no se introdujo calificacion //
+        cout << "No se introdujeron calificaciones" << '\n';
+        
+  return 0;
+}
